@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+  cursor: none;
+}
+
+/* CURSOR */
+.cursor {
+  width: 12px;
+  height: 12px;
+  background: #00eaff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: rgba(0,0,0,0.7);
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 80px;
+  background: linear-gradient(90deg,#ff00ff,#00eaff);
+  background-clip: text;
+  color: transparent;
+}
+
+/* SEARCH + FORM */
+.search, .form {
+  text-align: center;
+  padding: 20px;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background: black;
+  border: 1px solid #333;
+  color: white;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* CARD */
+.card {
+  height: 350px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MODAL */
+#modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+}

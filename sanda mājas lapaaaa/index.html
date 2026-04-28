@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<title>Latviešu mūziķu pasaule</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+<div class="cursor"></div>
+
+<nav>
+  <a href="index.html">HOME</a>
+  <a href="contacts.html">CONTACTS</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>LATVIEŠU MŪZIĶU PASAULE</h1>
+  <p>Nāc un iečeko latviešu mūziķus! Varbūt uzzināsi ko jaunu!
+    Un varbūt ja kaut ko neatrodi-pievieno!
+  </p>
+  <button onclick="scrollToArtists()">ENTER</button>
+</section>
+
+<!-- SEARCH -->
+<section class="search">
+  <input id="search" placeholder="🔍 Search artists..." onkeyup="searchArtists()">
+</section>
+
+<!-- ADD ARTIST -->
+<section class="form">
+  <input id="name" placeholder="Name">
+  <input id="genre" placeholder="Genre">
+  <textarea id="bio" placeholder="Bio"></textarea>
+  <input id="photo" placeholder="Image URL">
+  <input id="video" placeholder="YouTube embed link">
+  <button onclick="addArtist()">ADD ARTIST</button>
+</section>
+
+<!-- ARTISTS -->
+<section class="artists">
+  <div id="list" class="grid"></div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
